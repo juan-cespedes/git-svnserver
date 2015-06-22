@@ -5,7 +5,7 @@ import cStringIO as StringIO
 
 
 git_binary = "git"
-verbose_mode = False
+verbose_mode = True
 
 
 try:

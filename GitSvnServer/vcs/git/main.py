@@ -304,7 +304,7 @@ class Git(object):
         return changed, by, at
 
     def __get_changed_paths(self, sha1, path=''):
-        cmd = 'diff-tree --name-status -r %s^ %s -- %s' % (sha1, sha1, path)
+        cmd = 'diff-tree --name-status --no-commit-id -r --root %s -- %s' % (sha1, path)
 
         changed_files = {}
         for line in self.__get_git_data(cmd):
