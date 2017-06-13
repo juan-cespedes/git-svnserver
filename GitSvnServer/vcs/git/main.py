@@ -175,6 +175,8 @@ class Git(object):
         if not sha1:
             return results
 
+        if path=="":
+            path="."
         cmd = 'ls-tree -l %s %s "%s"' % (options, sha1, path)
 
         for line in self.__get_git_data(cmd):
